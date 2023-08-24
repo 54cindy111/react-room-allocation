@@ -20,7 +20,7 @@ export function CustomInputNumber(props: any) {
 	}
 
 	const handleChange = (val: any) => {
-		val > max ? setValue(max) : val < min ? setValue(min) : setValue(val);
+		val > max ? setValue(Number(max)) : val < min ? setValue(Number(min)) : setValue(Number(val));
 		setIsFocus(false);
 	};
 	const handleBlur = () => {
@@ -84,7 +84,7 @@ export function RoomBlock(props: any) {
 	const [adultMax, setAdultMax] = useState(roomGuestMax);
 	const [adultValue, setAdultValue] = useState(roomAdultGuestMin);
 	const [childMin, setChildMin] = useState(0);
-	const [childMax, setChildMax] = useState(roomGuestMax - 1);
+	const [childMax, setChildMax] = useState(roomGuestMax - roomAdultGuestMin);
 	const [childValue, setChildValue] = useState(0);
 
 	useEffect(() => {
