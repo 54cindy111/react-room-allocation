@@ -1,0 +1,9 @@
+node_modules
+dist
+env
+.gitignore
+README.md
+src/assets/*
+.vscode
+public
+.github
